@@ -207,7 +207,7 @@ impl<const S: usize> Eq<S> {
         self.coeffs = (self.design)(&self.vals, self.sr);
         for f in &mut self.filt {
             for (b, c) in f.iter_mut().zip(&self.coeffs) {
-                b.coeffs = *c;
+                b.set_coeffs(*c);
             }
         }
     }

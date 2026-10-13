@@ -402,7 +402,7 @@ impl DeEsser {
         self.shelf_gr = gr;
         let c = if gr < 0.01 { Coeffs::IDENTITY } else { Coeffs::design(FilterType::HighShelf, self.p.v(0) * 0.8, 0.8, -gr, self.sr) };
         for b in &mut self.shelf {
-            b.coeffs = c;
+            b.set_coeffs(c);
         }
     }
 }

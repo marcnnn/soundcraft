@@ -41,6 +41,8 @@ rustfft = "6"
 # Session bundles (one file holding a session and its audio, for the browser): stored entries only.
 zip = { version = "9", default-features = false }
 cpal = "0.16"
+# Temporary: fork rev until the craft-libs PR merges upstream; then point at storytold/craft-libs.
+craft-audio-dsp = { version = "0.1.0", git = "https://github.com/marcnnn/craft-libs", rev = "4e829ce0e63c80b7d3edce3f98fc9d7176c02db6" }
 
 # ui
 craft-ui = { version = "0.1.0", git = "https://github.com/storytold/craft-libs", rev = "5c874d51eeb3de70e735c8ce87a59a7dedd47675", features = ["serde"] }
